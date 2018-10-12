@@ -46,7 +46,7 @@ x<-c(1000:1050)
 y<-c(50:100)
 x
 y
-df<- as.data.frame(x,y)//narobe
+df<- as.data.frame(x,y)#narobe
 df<- as.data.frame(x)
 df
 df <- cbind(df,y)
