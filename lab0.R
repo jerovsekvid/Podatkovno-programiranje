@@ -61,22 +61,35 @@ cut(v1,breaks=10*0:5)
 v<-iris$Sepal.Length
 v[v>6]
 
+mylist<-list(x=c(1,5,7), y=c(4,2,6), z=c(0,3,4))
+mylist$y[2]
+mylist[[2]]
+mylist[2]
+mylist[[2]][[3]]
+mylist[2][3]
+a <- matrix(1:9, nrow = 3)
+colnames(a) <- c("A", "B", "C")
+a[1:2, ]
+class(a)
+class(a[1:2, ])
+class(a[1:2,3 ])
+class(a[1:2,3 ,drop=FALSE])
 
+cars
+cars[,2]
+cars[,"dist"]
+cars$dist
+cars[cars$speed==4|cars$dist>50,]
+library(tibble)
+df<- as.tibble(airquality[airquality$Temp>74 &airquality$Wind>12,c(1,5)])
+df
+df1<-na.omit(df)
+df
+ library(PerformanceAnalytics)
 
+head(airquality)
+df<-airquality[,1:4]
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+chart.Correlation(df,histogram = TRUE,pch="+")
+summray(df)
+summary(df)

@@ -70,3 +70,25 @@ x$p
 levels(x$p)<-c("fertilizer1","fertilizer2","fertilizer3")
 levels(x$p)
 #8 done 
+
+#subseting
+
+vec<-mtcars[,1]
+vec2<-vec[vec>15]
+vec2
+#1done
+colnames(mtcars)
+mtcars$mpg[mtcars$mpg>=15]
+#2done
+mtcars[mtcars$car<6&mtcars$gear==4,]
+#3 done
+mtcars[mtcars$mpg>=21,1:4]
+#4done
+head(na.omit(airquality[airquality$Ozone>28|airquality$Temp>70,]),5)
+#5done
+head(na.omit(airquality[airquality$Ozone>28|airquality$Temp>70,c("Ozone","Temp")]),5)
+#6done
+head(CO2[CO2$Treatment=="chilled"&CO2$uptake>15,-4],10)
+#7done
+airquality[airquality$Ozone>100,c("Ozone","Temp", "Month","Day")]
+#8done
