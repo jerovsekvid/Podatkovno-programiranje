@@ -30,9 +30,43 @@ row.names(B)<-c("a","b","c","d")
 colnames(B)<-c("x","y","z")
 B<-matrix(B,4,3,byrow=T)
 B
+
+
 x = c(1, 2, 3, 3, 5, 3, 2, 4, NA)
 factor(x)
 #1-a
 x <- c(11, 22, 47, 47, 11, 47, 11)
 factor(x, levels=c(11, 22, 47), ordered=TRUE)
  #2-c      
+z <- c("p", "a" , "g", "t", "b")
+factor(z[3]) <- "b"
+
+levels(z[3]) <- "b"
+ z
+
+ z[3] <- "b"
+ z
+#3-c
+ z <- factor(c("p", "q", "p", "r", "q"))
+ levels(z)
+levels(z)[levels(z)=="p"]<-"w"
+z
+#4 levels(z)[levels(z)=="p"]<-"w"
+
+s1 <- factor(sample(letters, size=5, replace=TRUE)) 
+s2 <- factor(sample(letters, size=5, replace=TRUE))
+s1<-as.character(s1)
+s2<-as.character(s2)
+s3<-(c(s1,s2))
+s3<-factor(s3)
+s3
+#5 done
+v<-iris$Sepal.Length
+f1<-cut(v,c(4.3,5.02,5.74,6.46,7.18,7.90))
+summary(f1)
+#6 done
+x <- data.frame(q=c(2, 4, 6), p=c("a", "b", "c"))
+x$p
+levels(x$p)<-c("fertilizer1","fertilizer2","fertilizer3")
+levels(x$p)
+#8 done 
