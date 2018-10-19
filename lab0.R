@@ -54,12 +54,12 @@ df
 colnames(df) <- c("stolpec1","stolpec2")
 df
 
+v1<-c(1:50)
+cut(v1,c(1,10,30))
+cut(v1,breaks=10*0:5)
 
-
-
-
-
-
+v<-iris$Sepal.Length
+v[v>6]
 
 
 
